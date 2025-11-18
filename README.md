@@ -1,1 +1,61 @@
 # JJroll
+[index.html](https://github.com/user-attachments/files/23604407/index.html)
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>给你一个小惊喜 😏</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 16px;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .tip {
+      margin-top: 12px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎁 给你准备了一个小视频</h1>
+
+  <video id="prankVideo" playsinline webkit-playsinline controls autoplay muted>
+    <!-- 先用测试视频，等下再换成你的 -->
+    <source src="JJroll.mp4" type="video/mp4" />
+    你的浏览器不支持 video 标签。
+  </video>
+
+  <div class="tip">如果没有自动播放，请点一下播放键 😏</div>
+
+  <script>
+    const v = document.getElementById("prankVideo");
+    // 再尝试自动播放一次（有些浏览器第一次会拦截）
+    v.play().catch(() => {
+      console.log("自动播放被拦截了，用户需要自己点播放。");
+    });
+  </script>
+</body>
+</html>
+
+
+https://github.com/user-attachments/assets/a50d5914-8d45-45de-ac78-aa22efca4b9f
+
